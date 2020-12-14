@@ -35,7 +35,7 @@ function SingleComment(props) {
                     setOpenReply(!OpenReply)
                     props.refreshFunction(response.data.result)
                 } else {
-                    alert('Failed to save Comment')
+                    alert('Falha ao salvar comentários')
                 }
             })
     }
@@ -70,7 +70,7 @@ function SingleComment(props) {
                         style={{ width: '100%', borderRadius: '5px' }}
                         onChange={handleChange}
                         value={CommentValue}
-                        placeholder="write some comments"
+                        placeholder="escreva os comentários"
                     />
                     <br />
                     <Button style={{ width: '20%', height: '52px' }} onClick={onSubmit}>Submit</Button>

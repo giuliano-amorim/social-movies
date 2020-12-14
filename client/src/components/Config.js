@@ -1,12 +1,7 @@
 //SERVER ROUTES
 export const USER_SERVER = '/api/users';
-
-
-
 export const API_URL = 'https://api.themoviedb.org/3/';
 export const API_KEY = '057cb3f5e27e45a637de10a1cefde121';
-
-
 export const IMAGE_BASE_URL ='http://image.tmdb.org/t/p/';
 
 //Sizes: w300, w780, w1280, original

@@ -29,27 +29,24 @@ function Favorite(props) {
         }
 
         if (Favorited) {
-            //when we are already subscribed 
             axios.post('/api/favorite/removeFromFavorite', variables)
                 .then(response => {
                     if (response.data.success) {
                         setFavoriteNumber(FavoriteNumber - 1)
                         setFavorited(!Favorited)
                     } else {
-                        alert('Failed to Remove From Favorite')
+                        alert('Falha ao remover dos favoritos')
                     }
                 })
 
         } else {
-            // when we are not subscribed yet
-
             axios.post('/api/favorite/addToFavorite', variables)
                 .then(response => {
                     if (response.data.success) {
                         setFavoriteNumber(FavoriteNumber + 1)
                         setFavorited(!Favorited)
                     } else {
-                        alert('Failed to Add To Favorite')
+                        alert('Falha ao adcionar aos favoritos')
                     }
                 })
         }
@@ -62,7 +59,7 @@ function Favorite(props) {
                 if (response.data.success) {
                     setFavoriteNumber(response.data.subscribeNumber)
                 } else {
-                    alert('Failed to get Favorite Number')
+                    alert('Falha ao obter o numero de favoritos')
                 }
             })
 
@@ -71,7 +68,7 @@ function Favorite(props) {
                 if (response.data.success) {
                     setFavorited(response.data.subcribed)
                 } else {
-                    alert('Failed to get Favorite Information')
+                    alert('Falha ao obter as informações dos favoritos')
                 }
             })
 
@@ -80,7 +77,7 @@ function Favorite(props) {
 
     return (
         <>
-            <Button onClick={onClickFavorite} > {!Favorited ? "Add to Favorite " : "Unfavorite "} {FavoriteNumber}</Button>
+            <Button onClick={onClickFavorite} > {!Favorited ? "Adicionar aos favoritos " : "Não favoritado "} {FavoriteNumber}</Button>
         </>
     )
 }

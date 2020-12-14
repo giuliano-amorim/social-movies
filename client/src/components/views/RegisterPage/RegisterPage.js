@@ -41,23 +41,23 @@ function RegisterPage(props) {
     <Formik
       initialValues={{
         email: '',
-        lastName: '',
-        name: '',
-        password: '',
-        confirmPassword: ''
+        sobrenome: '',
+        nome: '',
+        senha: '',
+        confirma_senha: ''
       }}
       validationSchema={Yup.object().shape({
-        name: Yup.string()
+        nome: Yup.string()
           .required('Name is required'),
-        lastName: Yup.string()
+        sobrenome: Yup.string()
           .required('Last Name is required'),
         email: Yup.string()
           .email('Email is invalid')
           .required('Email is required'),
-        password: Yup.string()
+        senha: Yup.string()
           .min(6, 'Password must be at least 6 characters')
           .required('Password is required'),
-        confirmPassword: Yup.string()
+        confirma_senha: Yup.string()
           .oneOf([Yup.ref('password'), null], 'Passwords must match')
           .required('Confirm Password is required')
       })}
@@ -66,9 +66,9 @@ function RegisterPage(props) {
 
           let dataToSubmit = {
             email: values.email,
-            password: values.password,
-            name: values.name,
-            lastname: values.lastname,
+            senha: values.senha,
+            nome: values.nome,
+            sobrenome: values.sobrenome,
             image: `http://gravatar.com/avatar/${moment().unix()}?d=identicon`
           };
 
@@ -89,56 +89,54 @@ function RegisterPage(props) {
           values,
           touched,
           errors,
-          dirty,
           isSubmitting,
           handleChange,
           handleBlur,
           handleSubmit,
-          handleReset,
         } = props;
         return (
           <div className="app">
             <h2>Sign up</h2>
             <Form style={{ minWidth: '375px' }} {...formItemLayout} onSubmit={handleSubmit} >
 
-              <Form.Item required label="Name">
+              <Form.Item required label="Nome">
                 <Input
-                  id="name"
-                  placeholder="Enter your name"
+                  id="nome"
+                  placeholder="Digite o seu nome"
                   type="text"
-                  value={values.name}
+                  value={values.nome}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={
-                    errors.name && touched.name ? 'text-input error' : 'text-input'
+                    errors.nome && touched.nome ? 'text-input error' : 'text-input'
                   }
                 />
-                {errors.name && touched.name && (
-                  <div className="input-feedback">{errors.name}</div>
+                {errors.nome && touched.nome && (
+                  <div className="input-feedback">{errors.nome}</div>
                 )}
               </Form.Item>
 
-              <Form.Item required label="Last Name">
+              <Form.Item required label="Sobrenome">
                 <Input
-                  id="lastName"
-                  placeholder="Enter your Last Name"
+                  id="sobrenome"
+                  placeholder="Digite o seu sobrenome"
                   type="text"
-                  value={values.lastName}
+                  value={values.sobrenome}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={
-                    errors.lastName && touched.lastName ? 'text-input error' : 'text-input'
+                    errors.sobrenome && touched.sobrenome ? 'text-input error' : 'text-input'
                   }
                 />
-                {errors.lastName && touched.lastName && (
-                  <div className="input-feedback">{errors.lastName}</div>
+                {errors.sobrenome && touched.sobrenome && (
+                  <div className="input-feedback">{errors.sobrenome}</div>
                 )}
               </Form.Item>
 
               <Form.Item required label="Email" hasFeedback validateStatus={errors.email && touched.email ? "error" : 'success'}>
                 <Input
                   id="email"
-                  placeholder="Enter your Email"
+                  placeholder="Digite o seu Email"
                   type="email"
                   value={values.email}
                   onChange={handleChange}
@@ -152,43 +150,43 @@ function RegisterPage(props) {
                 )}
               </Form.Item>
 
-              <Form.Item required label="Password" hasFeedback validateStatus={errors.password && touched.password ? "error" : 'success'}>
+              <Form.Item required label="Senha" hasFeedback validateStatus={errors.senha && touched.senha ? "error" : 'success'}>
                 <Input
-                  id="password"
-                  placeholder="Enter your password"
+                  id="senha"
+                  placeholder="Digite a sua senha"
                   type="password"
-                  value={values.password}
+                  value={values.senha}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={
-                    errors.password && touched.password ? 'text-input error' : 'text-input'
+                    errors.senha && touched.senha ? 'text-input error' : 'text-input'
                   }
                 />
-                {errors.password && touched.password && (
-                  <div className="input-feedback">{errors.password}</div>
+                {errors.senha && touched.senha && (
+                  <div className="input-feedback">{errors.senha}</div>
                 )}
               </Form.Item>
 
-              <Form.Item required label="Confirm" hasFeedback>
+              <Form.Item required label="Confirmar a senha" hasFeedback>
                 <Input
-                  id="confirmPassword"
-                  placeholder="Enter your confirmPassword"
+                  id="confirma_senha"
+                  placeholder="Confirme a senha"
                   type="password"
-                  value={values.confirmPassword}
+                  value={values.confirma_senha}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   className={
-                    errors.confirmPassword && touched.confirmPassword ? 'text-input error' : 'text-input'
+                    errors.confirma_senha && touched.confirma_senha ? 'text-input error' : 'text-input'
                   }
                 />
-                {errors.confirmPassword && touched.confirmPassword && (
-                  <div className="input-feedback">{errors.confirmPassword}</div>
+                {errors.confirma_senha && touched.confirma_senha && (
+                  <div className="input-feedback">{errors.confirma_senha}</div>
                 )}
               </Form.Item>
 
               <Form.Item {...tailFormItemLayout}>
                 <Button onClick={handleSubmit} type="primary" disabled={isSubmitting}>
-                  Submit
+                  Enviar
                 </Button>
               </Form.Item>
             </Form>

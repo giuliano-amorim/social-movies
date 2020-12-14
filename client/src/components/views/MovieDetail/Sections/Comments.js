@@ -42,7 +42,7 @@ function Comments(props) {
     return (
         <div>
             <br />
-            <Title level={3} > Share your opinions about {props.movieTitle} </Title>
+            <Title level={3} > Compartilhe o seu pensamento sobre  {props.movieTitle} </Title>
             <hr />
             {/* Lista de comentários  */}
             {console.log(props.CommentLists)}
@@ -58,20 +58,20 @@ function Comments(props) {
 
             {props.CommentLists && props.CommentLists.length === 0 &&
                 <div style={{ display: 'flex', justifyContent:'center', alignItems:'center', height:'200px'}} >
-                    Be the first one who shares your thought about this movie
+                    Seja o primeiro que compartilhará a sua ideia sobre este filme
                 </div>
             }
 
-            {/* Root Comment Form */}
+            {/* Formularios de comentarios */}
             <form style={{ display: 'flex' }} onSubmit={onSubmit}>
                 <TextArea
                     style={{ width: '100%', borderRadius: '5px' }}
                     onChange={handleChange}
                     value={Comment}
-                    placeholder="write some comments"
+                    placeholder="escreva os comentários"
                 />
                 <br />
-                <Button style={{ width: '20%', height: '52px' }} onClick={onSubmit}>Submit</Button>
+                <Button style={{ width: '20%', height: '52px' }} onClick={onSubmit}>Enviar</Button>
             </form>
 
         </div>

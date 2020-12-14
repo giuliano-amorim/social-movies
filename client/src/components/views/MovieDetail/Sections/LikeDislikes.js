@@ -18,9 +18,6 @@ function LikeDislikes(props) {
         variable = { commentId: props.commentId, userId: props.userId }
     }
 
-    
-
-
     useEffect(() => {
 
         Axios.post('/api/like/getLikes', variable)
@@ -28,17 +25,15 @@ function LikeDislikes(props) {
                 console.log('getLikes',response.data)
 
                 if (response.data.success) {
-                    //How many likes does this video or comment have 
                     setLikes(response.data.likes.length)
 
-                    //if I already click this like button or not 
                     response.data.likes.map(like => {
                         if (like.userId === props.userId) {
                             setLikeAction('liked')
                         }
                     })
                 } else {
-                    alert('Failed to get likes')
+                    alert('Falha ao obter os likes')
                 }
             })
 
@@ -46,17 +41,16 @@ function LikeDislikes(props) {
             .then(response => {
                 console.log('getDislike',response.data)
                 if (response.data.success) {
-                    //How many likes does this video or comment have 
+        
                     setDislikes(response.data.dislikes.length)
 
-                    //if I already click this like button or not 
                     response.data.dislikes.map(dislike => {
                         if (dislike.userId === props.userId) {
                             setDislikeAction('disliked')
                         }
                     })
                 } else {
-                    alert('Failed to get dislikes')
+                    alert('Falha ao obter dislikes')
                 }
             })
 
@@ -66,7 +60,7 @@ function LikeDislikes(props) {
     const onLike = () => {
        
         if (user.userData && !user.userData.isAuth) {
-            return alert('Please Log in first');
+            return alert(' Log in primeiramente');
         }
 
         if (LikeAction === null) {
@@ -78,8 +72,6 @@ function LikeDislikes(props) {
                         setLikes(Likes + 1)
                         setLikeAction('liked')
 
-                        //If dislike button is already clicked
-
                         if (DislikeAction !== null) {
                             setDislikeAction(null)
                             setDislikes(Dislikes - 1)
@@ -87,7 +79,7 @@ function LikeDislikes(props) {
 
 
                     } else {
-                        alert('Failed to increase the like')
+                        alert('Falha ao aumentar likes')
                     }
                 })
 
@@ -102,7 +94,7 @@ function LikeDislikes(props) {
                         setLikeAction(null)
 
                     } else {
-                        alert('Failed to decrease the like')
+                        alert('Falha ao diminuir os likes')
                     }
                 })
 
@@ -127,7 +119,7 @@ function LikeDislikes(props) {
                         setDislikeAction(null)
 
                     } else {
-                        alert('Failed to decrease dislike')
+                        alert('Falha ao diminuir dislike')
                     }
                 })
 
@@ -140,14 +132,13 @@ function LikeDislikes(props) {
                         setDislikes(Dislikes + 1)
                         setDislikeAction('disliked')
 
-                        //If dislike button is already clicked
                         if(LikeAction !== null ) {
                             setLikeAction(null)
                             setLikes(Likes - 1)
                         }
 
                     } else {
-                        alert('Failed to increase dislike')
+                        alert('Falha ao aumentar dislike')
                     }
                 })
 

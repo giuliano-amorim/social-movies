@@ -1,18 +1,8 @@
-Hello, My Friends  
-Thank you for having interest in this repository ! 
+# The MovieDB Clone - MERN Full-Stack App
 
-To use this application, 
+A clone of The Movie Database (TMDb) as a MERN full-stack project. Built with React, Express, Node JS, and MongoDB and deployed to an AWS EC2 instance.
+Access to public IP address: <a href="http://3.15.163.250/"> here</a>
 
-1. make dev.js file inside config folder 
-2. put mongoDB info into dev.js file 
-3. Type  " npm install " inside the root directory  ( Download Server Dependencies ) 
-4. Type " npm install " inside the client directory ( Download Front-end Dependencies )
-
-
-If you have problem, feel free to ask me ^^ 
-
-You can watch the tutorial for this app.
-
-https://www.youtube.com/channel/UCFyXA9x8lpL3EYWeYhj4C4Q?view_as=subscriber
-
-
+<p align="center">
+<img src="UI/default.jpeg">
+</p>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Row, Button } from 'antd';
 import axios from 'axios';
-
 import Comments from './Sections/Comments'
 import LikeDislikes from './Sections/LikeDislikes';
 import { API_URL, API_KEY, IMAGE_BASE_URL, IMAGE_SIZE } from '../../Config'
@@ -29,9 +28,9 @@ function MovieDetailPage(props) {
 
         axios.post('/api/comment/getComments', movieVariable)
             .then(response => {
-                console.log(response)
+              
                 if (response.data.success) {
-                    console.log('response.data.comments', response.data.comments)
+  
                     setCommentLists(response.data.comments)
                 } else {
                     alert('Falha ao obter comentários')
@@ -123,7 +122,7 @@ function MovieDetailPage(props) {
                 </div>
 
                 {/* Discussão */}
-                <Comments movieTitle={Movie.original_title} CommentLists={CommentLists} postId={movieId} refreshFunction={updateComment} />
+                <Comments movieTitle={Movie.title} CommentLists={CommentLists} postId={movieId} refreshFunction={updateComment} />
 
             </div>
 
