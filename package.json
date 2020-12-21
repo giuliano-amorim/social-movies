@@ -1,32 +1,40 @@
 {
-  "name": "react-chat-app",
+  "name": "social-movies",
   "version": "1.0.0",
-  "description": "react blog",
-  "main": "index.js",
-  "engine": {
-    "node": "^10.16.0",
-    "npm": "^6.9.0"
+  "description": "Rede social filmes",
+  "main": "server.js",
+  "engines": {
+    "node": "^15.4.0"
   },
   "scripts": {
+    "test": "NODE_ENV= jest",
     "start": "node server",
     "server": "nodemon server"
   },
-  "author": "Nukhbah Majid",
+  "keywords": [
+    "express"
+  ],
+  "author": "Giuliano Lopes Vieira Amorim",
   "license": "ISC",
+  "jest": {
+    "verbose": true,
+    "preset": "@shelf/jest-mongodb"
+  },
   "dependencies": {
-    "bcrypt": "^3.0.6",
-    "body-parser": "^1.18.3",
-    "config": "^3.3.3",
-    "cookie-parser": "^1.4.3",
+    "aws-sdk": "^2.768.0",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "express-validator": "^6.4.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.5",
-    "react-redux": "^5.0.7",
-    "socket.io": "^2.2.0"
+    "mongoose": "^5.9.5",
+    "sinon": "^9.2.1"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.19.1"
+    "@shelf/jest-mongodb": "^1.2.3",
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.4"
   }
 }

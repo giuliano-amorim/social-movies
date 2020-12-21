@@ -1,8 +1,33 @@
-# The MovieDB Clone - MERN Full-Stack App
+Versão
+1.0.0
 
-A clone of The Movie Database (TMDb) as a MERN full-stack project. Built with React, Express, Node JS, and MongoDB and deployed to an AWS EC2 instance.
-Access to public IP address: <a href="http://3.15.163.250/"> here</a>
+Pré Requisitos
+MERN
+FrameWorks
 
-<p align="center">
-<img src="UI/default.jpeg">
-</p>
+Link para o projeto no Trello:
+https://trello.com/b/Sgatq2RN/creators-cake
+
+Tecnologias utilizadas:
+NodeJs
+React
+MongoDB
+Express
+Bcryptjs
+Cors
+Jwt
+Bootstrap
+Reactstrap
+Styled-components
+Font 
+
+Deploy:
+https://cake-back.herokuapp.com/
+
+GitLab:
+BackEnd: https://gitlab.com/giuliano.amorim/cake_back.git
+FrontEnd: https://gitlab.com/giuliano.amorim/criador_bolos_front.git
+
+Prints das telas:
+
+Trabalhos futuros:
