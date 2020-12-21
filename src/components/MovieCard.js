@@ -29,7 +29,7 @@ export const MovieCard = ({movie, image, page, favouriteMovie, watchListMovie, w
                         </div>
                     </div>
                     <div className="card-footer text-muted">
-                        Vote Average: {movie.vote_average}
+                        Média de votação: {movie.vote_average}
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@ export const MovieCard = ({movie, image, page, favouriteMovie, watchListMovie, w
                         <h5 className="card-title">{movie.title}</h5>
                     </div>
                     <div className="card-footer text-muted">
-                        <Link className='btn btn-outline-info' to={`/movie/${movie.id}`}>View</Link>
+                        <Link className='btn btn-outline-info' to={`/movie/${movie.id}`}>Ver</Link>
                     </div>
                 </div>
             </div>

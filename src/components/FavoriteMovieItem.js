@@ -12,7 +12,7 @@ const FavoriteMovieItem = ({movie, dislikeMovie}) => {
                 <Link className='btn btn-outline-info' to={`/movie/${movie.id}`}>View</Link>
             </div>
             <div className="card-footer">
-                <small className="text-muted bg-light">Release Date: {movie.release_date}</small>
+                <small className="text-muted bg-light">Data de Lançamento: {movie.release_date}</small>
             </div>
             <div className="card-footer bg-light">
                 <button type='btn' className="btn btn-outline-danger" onClick={() =>dislikeMovie(movie)}>

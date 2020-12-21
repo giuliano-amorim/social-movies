@@ -17,8 +17,8 @@ const CriticPageReviewItem = (
         <div className="card shadow p-3 mb-5 bg-white rounded ">
             <div className="card-body">
                 {id !== userReview._id && <h4>{userReview.title}</h4>}
-                {id !== userReview._id && <h5>Movie: {userReview.movieName}</h5>}
-                {id !== userReview._id && <p>Posted on: {date}</p>}
+                {id !== userReview._id && <h5>Filme: {userReview.movieName}</h5>}
+                {id !== userReview._id && <p>PPostado em: {date}</p>}
                 Review:
                 {id !== userReview._id && <h6>{userReview.text}</h6>}
 
@@ -35,17 +35,17 @@ const CriticPageReviewItem = (
                                                  }}/>}
                 {id !== userReview._id && <button type='btn'
                                              className='btn btn-outline-dark mb-lg-2 w-100'
-                                             onClick={() => editReview(userReview._id)}>Edit</button>}
+                                             onClick={() => editReview(userReview._id)}>Editar</button>}
 
                 {id !== userReview._id && <button type='btn'
                                              className='btn btn-outline-danger mb-lg-2 w-100'
-                                             onClick={() => deleteReview(userReview)}>Delete</button>}
+                                             onClick={() => deleteReview(userReview)}>Remover</button>}
                  
                 {id === userReview._id && <button type='btn' className='btn btn-outline-danger w-100'
-                                                  onClick={() => cancelEdit(userReview._id)}>Cancel</button>}
+                                                  onClick={() => cancelEdit(userReview._id)}>Cancear</button>}
 
                 {id === userReview._id && <button type='btn' className='btn btn-outline-success w-100'
-                                             onClick={() => updateReview(userReview._id)}>Update</button>}
+                                             onClick={() => updateReview(userReview._id)}>Atualizar</button>}
             </div>
         </div>
     )

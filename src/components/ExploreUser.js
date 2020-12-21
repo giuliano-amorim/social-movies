@@ -50,7 +50,7 @@ export default class ExploreUser extends React.Component {
             return (
                 <div hidden={fan._id !== this.props.toShowId}
                      className="container-fluid border shadow-lg p-3 mb-3 border-secondary bg-light">
-                    <h2 className="font-weight-normal">Movies liked by {fan.username}:</h2>
+                    <h2 className="font-weight-normal">Filmes curtidos por {fan.username}:</h2>
                     <ul className="list-group border-light">
                         {this.renderLikedMovies()}
                     </ul>
@@ -64,7 +64,7 @@ export default class ExploreUser extends React.Component {
             return (
                 <div hidden={fan._id !== this.props.toShowId}
                      className="container-fluid border shadow-lg p-3 mb-3 border-secondary bg-light">
-                    <h2 className="font-weight-normal">Events of {fan.username}:</h2>
+                    <h2 className="font-weight-normal">Eventos de {fan.username}:</h2>
                     <ul className="list-group border-light">
                         {this.renderActorEvents()}
                     </ul>
@@ -120,10 +120,10 @@ export default class ExploreUser extends React.Component {
                           to="/my-page">
                         <button className="btn btn-outline-dark mb-3">
                             <span><i className="fa fa-arrow-left mr-2"/></span>
-                            My Page
+                            Minha página
                         </button>
                     </Link>
-                    <h1 className="display-4">All Fans and Actors in The Movie Network:</h1>
+                    <h1 className="display-4">Todos os fans e atores no Social Movie:</h1>
                     <div className="p-3">
                         {this.renderfans()}
                     </div>

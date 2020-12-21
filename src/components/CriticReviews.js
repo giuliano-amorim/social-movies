@@ -22,13 +22,13 @@ export default class CriticReviews extends React.Component {
             return (
                 <div>
                     <div hidden={this.props.type !== 'Critic' || !this.props.loggedIn}>
-                        <label htmlFor="reviewTitle">Review Title</label>
+                        <label htmlFor="reviewTitle">Review Titulo</label>
                         <input className="form-control"
                                ref={node => title = node}
                                id="reviewTitle"
                             // onChange={this.titleChanged}
                                placeholder="Review Title"/>
-                        <label htmlFor="review-text">Write Review</label>
+                        <label htmlFor="review-text">Escritor do Review</label>
                         <textarea ref={node => text = node}
                                   className="form-control"
                                   placeholder="Write review"

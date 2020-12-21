@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const FanPage = ({username, description}) => {
     return (
         <div className="jumbotron">
-            <h1 className="display-3">Profile of {username}: </h1>
+            <h1 className="display-3">Perfil de {username}: </h1>
             <hr className="my-2"/>
 
             <div className="row">
@@ -23,8 +23,8 @@ const FanPage = ({username, description}) => {
                 <div className="col-sm-4">
                     <div className="card shadow p-3 mb-5 bg-white rounded">
                         <div className="card-body">
-                            <h5 className="card-title">Watchlist</h5>
-                            <p className="card-text">Here are all the movies you've added to your watchlist!.</p>
+                            <h5 className="card-title">Lista</h5>
+                            <p className="card-text">Aqui estão todos os seus filmes!.</p>
                             <Link className="btn btn-outline-primary"
                                   to="/my-page/watchlist-movies">
                                 View
@@ -37,8 +37,8 @@ const FanPage = ({username, description}) => {
                 <div className="col-sm-4">
                     <div className="card shadow p-3 mb-5 bg-white rounded">
                         <div className="card-body">
-                            <h5 className="card-title">Fans Followed</h5>
-                            <p className="card-text">View all other fans you've followed!</p>
+                            <h5 className="card-title">Seguidoresd</h5>
+                            <p className="card-text">Veja todos os fãs que estão te seguindo!</p>
                             <Link className="btn btn-outline-primary"
                                   to="/my-page/fans-followed">
                                 View

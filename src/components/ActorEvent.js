@@ -11,13 +11,13 @@ const ActorEvent = ({username, textChanged, createEvent}) => {
     return (
         <div className="container-fluid w-75">
             <h1 className="display-4">Manage Events</h1>
-            <p className="lead">All your promotional events in one place!</p>
+            <p className="lead">Todos os seus eventos promocionais em um só lugar!</p>
             <div className="col-12 bg-dark text-white rounded">
-                <p className="lead p-2">Create New Event</p>
+                <p className="lead p-2">Criar novo evento</p>
             </div>
             <div className="cardRegistration card-container container-fluid rounded bg-light">
                 <form className="form-inline m-2">
-                    <label htmlFor="eventName" className='col-2'>Enter Event name:</label>
+                    <label htmlFor="eventName" className='col-2'>Nome do evento:</label>
                     &nbsp;
                     <input className="col-9 form-control"
                            id="eventName"
@@ -27,7 +27,7 @@ const ActorEvent = ({username, textChanged, createEvent}) => {
                 <br/>
 
                 <form className="form-inline m-2">
-                    <label htmlFor="venueName" className='col-2'>Enter Venue Location:</label>
+                    <label htmlFor="venueName" className='col-2'>Localização do evento:</label>
                     &nbsp;
                     <input className="col-9 form-control"
                            id="venueName"
@@ -37,7 +37,7 @@ const ActorEvent = ({username, textChanged, createEvent}) => {
                 <br/>
 
                 <form className="form-inline m-2">
-                    <label htmlFor="eventDate" className='col-2'>Enter Event Date:</label>
+                    <label htmlFor="eventDate" className='col-2'>Data do evento:</label>
                     &nbsp;
                     <input className="col-9 form-control"
                            id="eventDate"
@@ -61,13 +61,13 @@ const ActorEvent = ({username, textChanged, createEvent}) => {
                         <button type='btn'
                                 onClick={() => createEvent(inputElem.value, inputElem1.value, inputElem2.value, inputElem3.value)}
                                 className='btn btn-outline-success w-75'>
-                            Create Event
+                            Criar evento
                         </button>
                     </div>
                 </div>
             </div>
             <div className="col-12 bg-dark text-white rounded mt-2">
-                <p className="lead p-2">Your Promotional Events</p>
+                <p className="lead p-2">Seu evento promocional</p>
             </div>
             <EventContainer/>
         </div>

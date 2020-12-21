@@ -61,8 +61,8 @@ export default class AdminPage extends React.Component {
                             <select value={this.type}
                                     onChange={(Event) => this.type = Event.target.value}>
                                 <option value="Fan">Fan</option>
-                                <option value="Actor">Actor</option>
-                                <option value="Critic">Critic</option>
+                                <option value="Actor">Ator</option>
+                                <option value="Critic">Critico</option>
                                 <option value="Admin">Admin</option>
                             </select>
                         </td>
@@ -72,12 +72,12 @@ export default class AdminPage extends React.Component {
                                    onChange={(Event) => this.email = Event.target.value}/>
                         </td>
                         <td>
-                            <input placeholder='City'
+                            <input placeholder='Cidade'
                                    className="w-100 form-control"
                                    onChange={(Event) => this.city = Event.target.value}/>
                         </td>
                         <td>
-                            <input placeholder='Phone'
+                            <input placeholder='Telefone'
                                    className="w-100 form-control"
                                    onChange={(Event) => this.phone = Event.target.value}/>
                         </td>

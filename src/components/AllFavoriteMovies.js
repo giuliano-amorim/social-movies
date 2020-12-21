@@ -15,7 +15,7 @@ class AllFavoriteMovies extends React.Component {
                         <button type='btn'
                                 className='btn btn-danger'
                                 onClick={() => this.props.deleteFavoriteMovie(movie, user)}>
-                            Delete
+                            Remover
                         </button>
                     </td>
                 </tr>
@@ -33,11 +33,11 @@ class AllFavoriteMovies extends React.Component {
     render() {
         return (
             <div className='container-fluid p-5'>
-                <h3>All movies liked by all Fans:</h3>
+                <h3>Todos os filmes curtidos por todos os fãs:</h3>
                 <table className='table table-hover'>
                     <thead>
                     <tr>
-                        <th scope="col">Movie Name</th>
+                        <th scope="col">Nome do filme</th>
                         <th scope="col">Username</th>
                         <th scope="col">&nbsp;</th>
                     </tr>

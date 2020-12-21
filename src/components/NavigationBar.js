@@ -8,7 +8,7 @@ const NavigationBarComponent = ({type, logout, loggedIn, username}) => {
         <nav className="navbar navbar-dark bg-white">
             <Link to="/">
                 <button type='btn' className="text-primary btn btn-outline-light">
-                    <h1>The Movie Network</h1>
+                    <h1>Social Movies</h1>
                 </button>
             </Link>
             <form className="form-inline">
@@ -21,49 +21,49 @@ const NavigationBarComponent = ({type, logout, loggedIn, username}) => {
                 <div hidden={loggedIn}>
                     <Link style={{display: 'block', height: '100%'}}
                           className="navbar-nav" to="/register">
-                        <button type='btn' className="text-primary btn btn-outline-light">Registration</button>
+                        <button type='btn' className="text-primary btn btn-outline-light">Registrar</button>
                     </Link>
                 </div>
                 <div hidden={type === undefined || !loggedIn}>
                     <Link style={{display: 'block', height: '100%'}}
                           className="navbar-nav" to="/profile">
-                        <button type='btn' className="text-primary btn btn-outline-light">Profile</button>
+                        <button type='btn' className="text-primary btn btn-outline-light">Perfil</button>
                     </Link>
                 </div>
                 <div hidden={type !== 'Fan' || !loggedIn}>
                     <Link style={{display: 'block', height: '100%'}}
                           className="navbar-nav" to="/my-page">
-                        <button type='btn' className="text-primary btn btn-outline-light">{username}'s Page</button>
+                        <button type='btn' className="text-primary btn btn-outline-light">Página do {username}</button>
                     </Link>
                 </div>
                 <div hidden={type !== 'Fan' || !loggedIn}>
                     <Link style={{display: 'block', height: '100%'}}
                           className="navbar-nav" to="/explore">
-                        <button type='btn' className="text-primary btn btn-outline-light">Explore</button>
+                        <button type='btn' className="text-primary btn btn-outline-light">Explorar</button>
                     </Link>
                 </div>
                 <div hidden={type !== 'Critic' || !loggedIn}>
                     <Link style={{display: 'block', height: '100%'}}
                           className="navbar-nav" to="/my-page-critic">
-                        <button type='btn' className="text-primary btn btn-outline-light">{username}'s Critic Page</button>
+                        <button type='btn' className="text-primary btn btn-outline-light">Página de Críticas de {username}</button>
                     </Link>
                 </div>
                 <div hidden={type !== 'Admin' || !loggedIn}>
                     <Link style={{display: 'block', height: '100%'}}
                           className="navbar-nav" to="/all-favourite-movies">
-                        <button type='btn' className="text-primary btn btn-outline-light">All Favourite Movies</button>
+                        <button type='btn' className="text-primary btn btn-outline-light">Todos os favoritos filmes</button>
                     </Link>
                 </div>
                 <div hidden={type !== 'Admin' || !loggedIn}>
                     <Link style={{display: 'block', height: '100%'}}
                           className="navbar-nav" to="/admin-page">
-                        <button type='btn' className="text-primary btn btn-outline-light">Admin Page</button>
+                        <button type='btn' className="text-primary btn btn-outline-light">Pagina do Administrador</button>
                     </Link>
                 </div>
                 <div hidden={type !== 'Actor' || !loggedIn}>
                     <Link style={{display: 'block', height: '100%'}}
                           className="navbar-nav" to="/my-page-actor">
-                        <button type='btn' className="text-primary btn btn-outline-light">{username}'s Actor Page</button>
+                        <button type='btn' className="text-primary btn btn-outline-light">Página dos atores de {username}</button>
                     </Link>
                 </div>
                 <div hidden={type !== 'Fan' || !loggedIn}>

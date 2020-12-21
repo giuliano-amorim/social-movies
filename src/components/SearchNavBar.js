@@ -40,7 +40,7 @@ function ButtonAppBar(props) {
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="title" color="inherit" className={classes.flex}>
-                        Search Movies
+                        Procurar Movies
                     </Typography>
                     <Link to={'/'}>
                         <Button className="text-white">
@@ -49,7 +49,7 @@ function ButtonAppBar(props) {
                     </Link>
                     <Link to={'/discover'}>
                         <Button className="text-white">
-                            Discover
+                            Discobrir
                         </Button>
                     </Link>
                     <Link to={'/news/top'}>
@@ -64,7 +64,7 @@ function ButtonAppBar(props) {
                     </Link>
                     <Link to={'/news/reviews'}>
                         <Button className="text-white">
-                            External Reviews
+                             Reviews externos
                         </Button>
                     </Link>
                     <FormControl className={classes.margin}>
@@ -81,7 +81,7 @@ function ButtonAppBar(props) {
                             props.searchMovie(searchText.value);
                         }
 
-                    }}>Search</Button>
+                    }}>Busca</Button>
                 </Toolbar>
             </AppBar>
         </div>

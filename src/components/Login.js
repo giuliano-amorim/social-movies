@@ -9,7 +9,7 @@ export default class Login extends React.Component {
     login(username, password) {
         this.props.login(username, password).then(response => {
             if (response.status === 500) {
-                alert("Wrong username or password")
+                alert("Errado o seu username ou password")
             }
             else {
                 response.json()

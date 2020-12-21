@@ -6,12 +6,12 @@ const FollowedFanItem = ({fan, unfollowFan}) => {
             <div className="card-body">
                 <h5 className="card-title">{fan.username}</h5>
                 {fan.description !== undefined ? <p>{fan.description}</p> :
-                    <p>No Description Available</p>}
+                    <p> Sem descrição disponível</p>}
             </div>
             <div className="card-footer ">
                 <button type='btn' className="btn btn-outline-danger" onClick={() => unfollowFan(fan)}>
                     <span><i className="fa fa-trash">&nbsp;</i></span>
-                    Unfollow
+                    Não seguir
                 </button>
             </div>
         </div>

@@ -21,14 +21,14 @@ export default class Registration extends React.Component {
             <div className="container">
                 <div className="cardRegistration card-container">
                     <form className="form-signin form-inline row m-2">
-                        <label htmlFor="username form-label" className="col-3 ">Enter Username:</label>
+                        <label htmlFor="username form-label" className="col-3 ">Digite o Username:</label>
                         <input className="col-8"
                                id="username"
                                onChange={() => this.props.textChanged('username', this.inputElem.value)}
                                ref={node => this.inputElem = node}/>
                     </form>
                     <form className="form-signin form-inline m-2">
-                        <label htmlFor="password" className="col-3 ">Enter Password:</label>
+                        <label htmlFor="password" className="col-3 ">Digite o Password:</label>
 
                         <input className="col-8"
                                id="password"
@@ -37,7 +37,7 @@ export default class Registration extends React.Component {
                                ref={node => this.inputElem1 = node}/>
                     </form>
                     <form className="form-signin form-inline m-2">
-                        <label htmlFor="verifyPassword" className="col-3 ">Verify Password:</label>
+                        <label htmlFor="verifyPassword" className="col-3 ">Verifique o Password:</label>
 
                         <input className="col-8"
                                id="verifyPassword"
@@ -52,8 +52,8 @@ export default class Registration extends React.Component {
                             onChange={() => this.props.selectUserType(this.selectElement.value)}
                             ref={node => this.selectElement = node}>
                             <option>Fan</option>
-                            <option>Actor</option>
-                            <option>Critic</option>
+                            <option>Ator</option>
+                            <option>Crítico</option>
                         </select>
                     </form>
 
@@ -61,7 +61,7 @@ export default class Registration extends React.Component {
                         <button type='btn' onClick={() => {
                             this.register()
                         }}
-                                className='btn btn-primary'>Register
+                                className='btn btn-primary'>Registrar
                         </button>
                     </form>
                 </div>

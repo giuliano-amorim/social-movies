@@ -26,14 +26,14 @@ class WatchlistMovies extends React.Component {
         return (
             <div className="container-fluid">
                 <div className="border shadow p-3 mb-5 border-light">
-                    <h1 className="display-3">Watchlist Movies</h1>
-                    <p className="lead">All your Watchlist movies:</p>
+                    <h1 className="display-3">Lista de filmes</h1>
+                    <p className="lead">Todos of filmes:</p>
                     <hr className="my-2"/>
                     <Link style={{display: 'block', height: '100%'}}
                           to="/my-page">
                         <button className="btn btn-outline-dark">
                             <span><i className="fa fa-arrow-left mr-2"/></span>
-                            My Page
+                            Minha página
                         </button>
                     </Link>
                     <div className="card-deck row">

@@ -9,15 +9,15 @@ const WatchlistMovieItem = ({movie, removeMovieFromBookmark}) => {
             <img className="card-img-top" src={poster} alt=''/>
             <div className="card-body">
                 <h5 className="card-title">{movie.title}</h5>
-                <Link className='btn btn-outline-info' to={`/movie/${movie.id}`}>View</Link>
+                <Link className='btn btn-outline-info' to={`/movie/${movie.id}`}>Ver</Link>
             </div>
             <div className="card-footer">
-                <small className="text-muted bg-light">Release Date: {movie.release_date}</small>
+                <small className="text-muted bg-light">Data de lançamento: {movie.release_date}</small>
             </div>
             <div className="card-footer bg-light">
                 <button type='btn' className="btn btn-outline-danger" onClick={() => removeMovieFromBookmark(movie)}>
                     <span><i className="fa fa-thumbs-down"></i>&nbsp;</span>
-                    Unwatch
+                    Não visto
                 </button>
             </div>
         </div>

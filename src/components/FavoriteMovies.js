@@ -34,7 +34,7 @@ class FavoriteMovies extends React.Component {
                           to="/my-page">
                         <button className="btn btn-outline-dark">
                             <span><i className="fa fa-arrow-left mr-2"/></span>
-                            My Page
+                            Minha página
                         </button>
                     </Link>
                     <div className="card-deck row">
